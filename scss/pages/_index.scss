@@ -1,0 +1,88 @@
+.location {
+    display: flex;
+    justify-content: center;
+    background-color: #EAEAEA;
+    gap: 17px;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 500;
+
+    .input:focus {
+        outline: none;
+    }
+}
+
+.explore {
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 39px 30px 57px 30px;
+
+    &-content {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 10px 0 29px 5px;
+    }
+}
+
+.operation {
+
+    &-block {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 5px;
+        padding: 0 20px 68px 20px;
+    }
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    border-radius: 25px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    padding: 27px 0;
+    margin-left: 12px;
+
+    &-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 22px;
+        margin-left: 32px;
+        font-weight: 500;
+        width: 100%;
+    }
+}
+
+.operation-icon {
+    color: #7E7E7E;
+    width: 18px;
+}
+
+.fa-store {
+    color: $main-color;
+}
+
+.left-number {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: -12px;
+    color: white;
+    font-size: 14px;
+    width: 24px;
+    height: 24px;
+    background-color: $main-color;
+    border-radius: 50%;
+}
+
+.restaurants {
+    background-color: $background-color;
+    padding: 2px 0 68px 0;
+}
