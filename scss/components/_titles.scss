@@ -4,6 +4,22 @@
     margin: 0 35px 0 20px;
 }
 
-.title-section {
+.restaurants-title, .operation-title {
     padding: 48px 0 22px 18px;
+}
+
+@media (min-width: 930px) {
+    .explore-title {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .explore-title {
+        margin: 0;
+    }
+
+    .restaurants-title {
+        padding: 26px 0 25px 18px;
+    }
 }

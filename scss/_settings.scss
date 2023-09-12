@@ -3,16 +3,27 @@
     margin: 0;
 }
 
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
 a {
     text-decoration: none;
     color: black;
 }
 
 
-/* Colors */
+/*colors*/
 
-$background-color : #F6F6F6;
-$second-color : #99E2D0;
 $main-color : #9356DC;
+$second-color : #99E2D0;
+$background-color : #F6F6F6;
 $new-text : #008766;
 $new-background : #99E2D0;

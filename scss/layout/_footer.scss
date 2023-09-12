@@ -18,9 +18,9 @@ footer {
         flex-direction: column;
         gap: 7px;
         a {
-        color: white;
-        font-size: 16px;
-    }
+            color: white;
+            font-size: 16px;
+        }
 
     &-bold { 
         font-weight: 500;
@@ -39,4 +39,46 @@ footer {
 .fa-xs {
     width: 13px;
     height: 10px;
+}
+
+@media (min-width: 768px) {
+
+    footer {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: flex-end;
+        gap: 16px;
+        padding: 60px 50px 18px 0;
+
+        p {
+            order: 2;
+        }
+    }
+
+    .links {
+        flex-direction: row;
+        order: 1;
+        margin-right: 10px;
+        gap: 10px;
+
+        &-normal {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (min-width: 1300px) {
+
+    footer {
+        padding: 60px 68px 18px 0;
+    }
+
+    .links {
+        margin-right: 29px;
+        gap: 16px;
+
+        &-normal {
+            margin-right: 70px;
+        }
+    }
 }
