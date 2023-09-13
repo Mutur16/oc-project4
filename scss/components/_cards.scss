@@ -71,6 +71,46 @@
     }
 }
 
+.menu-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0 5px 0;
+    width: 100%;
+
+    .card {
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    }
+    
+    .card-content {
+        width: 100%;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .card-title {
+        margin-bottom: 4px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .card-subtitle {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .price {
+        position: absolute;
+        display: flex;
+        align-self: flex-end;
+        margin-top: 25px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
 @media (min-width: 768px) {
 
     .restaurants-cards {

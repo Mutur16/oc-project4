@@ -1,0 +1,25 @@
+.background-img {
+    width: 375px;
+    height: 275px;
+    object-fit: cover ;
+    width: 100%;
+}
+
+.restaurant-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 15px;
+    background-color: $background-color;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: -60px;
+    position: relative;
+
+    .restaurant-like {
+        position: absolute;
+        display: flex;
+        align-self: flex-end;
+        margin-top: 50px;
+        margin-right: 25px;
+    }
+}
