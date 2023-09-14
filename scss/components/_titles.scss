@@ -31,13 +31,18 @@
     text-transform: uppercase;
 }
 
-@media (min-width: 930px) {
+@media /*Tablet*/ (min-width: 767px) {
     .explore-title {
         font-size: 40px;
     }
+
+    .restaurant-title {
+        justify-content: center;
+        margin: 15px 0 2px -40px;
+    }
 }
 
-@media (min-width: 1300px) {
+@media /*Desktop*/ (min-width: 1024px) {
     .explore-title {
         margin: 0;
     }

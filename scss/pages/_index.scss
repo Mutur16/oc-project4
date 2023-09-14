@@ -86,20 +86,7 @@
     padding: 2px 0 68px 0;
 }
 
-@media (min-width: 500px) and (max-width: 930px) {
-
-    .operation-block {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    .block-content {
-        justify-content: center;
-        margin: 0;
-    }
-}
-
-@media (min-width: 930px) {
+@media /*Tablet*/ (min-width: 767px) {
 
     .explore {
         padding-bottom: 30px;
@@ -119,7 +106,7 @@
     }
 }
 
-@media (min-width: 1300px) {
+@media /*Desktop*/ (min-width: 1024px) {
 
     .explore {
         padding-top: 30px;

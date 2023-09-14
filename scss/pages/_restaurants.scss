@@ -1,19 +1,22 @@
 .background-img {
     width: 375px;
     height: 275px;
-    object-fit: cover ;
+    object-fit: cover;
     width: 100%;
 }
 
 .restaurant-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 0 15px;
     background-color: $background-color;
     border-radius: 40px 40px 0px 0px;
-    margin-top: -60px;
     position: relative;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 15px;
+        margin-top: -60px;
+    }
 
     .restaurant-like {
         position: absolute;
@@ -21,5 +24,35 @@
         align-self: flex-end;
         margin-top: 50px;
         margin-right: 25px;
+    }
+}
+
+@media /*Tablet*/ (min-width: 767px) {
+
+    .restaurant-menu {
+        margin: -40px auto 0 auto;
+        width: 90%;
+    
+        &-content {
+            margin: auto;
+            width: 73%;
+        }
+
+        .restaurant-like {
+            align-self: center;
+            margin: 65px 0 0 290px;
+        }
+    }
+}
+
+@media /*Desktop*/ (min-width: 1024px) {
+
+    .background-img {
+        height: 385px;
+    }
+    
+    .restaurant-menu {
+        margin: -40px auto 0 auto;
+        width: 73%;
     }
 }
