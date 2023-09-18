@@ -111,28 +111,27 @@
     }
 }
 
-@media /*Tablet*/ (min-width: 767px) {
+@media /*Desktop*/ (min-width: 1024px) {
 
     .restaurants-cards {
-        padding-bottom: 30px;
-        gap: 50px;
+        gap: 60px;
+        padding-bottom: 33px;
     }
 
     .row {
         display: flex;
         flex-direction: row;
+        gap: 100px;
         
         a {
             width: 100%;
         }
     }
-}
 
-@media /*Desktop*/ (min-width: 1024px) {
-
-    .row {
-        gap: 100px;
+    .card-content {
+        margin-left: 10px;
     }
+}
 
     .menu-cards {
         display: flex;
@@ -150,4 +149,4 @@
         margin-right: 24px;
         margin-top: 16px;  
     }
-}
+

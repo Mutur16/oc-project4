@@ -1,3 +1,13 @@
+@import "settings.scss";
+@import "utils/animations.scss";
+@import "utils/mixins.scss";
+@import "utils/variables";
+@import "components/titles.scss";
+@import "components/cards.scss";
+@import "components/button.scss";
+@import "layout/header.scss";
+@import "layout/footer.scss";
+
 .background-img {
     width: 375px;
     height: 275px;
@@ -16,6 +26,9 @@
         gap: 40px;
         padding: 0 15px;
         margin-top: -60px;
+        section {
+            opacity: 0;
+        }
     }
 
     .restaurant-like {
@@ -28,52 +41,17 @@
 }
 
 .starter {
-    animation: fadeIn 0.6s linear;
-    animation-fill-mode:both;
+    animation: slideUp 1s forwards;
 }
 
 .main-course {
-    animation: fadeIn 0.6s linear;
-    animation-fill-mode:both;
-    animation-delay:0.5s;
+    animation: slideUp 1s forwards;
+    animation-delay: 0.5s;
 }
 
 .dessert {
-    animation: fadeIn 0.6s linear;
-    animation-fill-mode: both;
+    animation: slideUp 1s forwards;
     animation-delay: 1s;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    
-    75% {
-        opacity: 0.4;
-    }
-    
-    100% {
-        opacity: 1;
-    }
-}
-
-@media /*Tablet*/ (min-width: 767px) {
-
-    .restaurant-menu {
-        margin: -40px auto 0 auto;
-        width: 90%;
-    
-        &-content {
-            margin: auto;
-            width: 73%;
-        }
-
-        .restaurant-like {
-            align-self: center;
-            margin: 65px 0 0 290px;
-        }
-    }
 }
 
 @media /*Desktop*/ (min-width: 1024px) {
@@ -88,6 +66,11 @@
         &-content {
             margin: auto;
             width: 60%;
+        }
+
+        .restaurant-like {
+            align-self: center;
+            margin: 65px 0 0 290px;
         }
     }
 }

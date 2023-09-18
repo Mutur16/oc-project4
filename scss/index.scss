@@ -1,3 +1,13 @@
+@import "settings.scss";
+@import "utils/animations.scss";
+@import "utils/mixins.scss";
+@import "utils/variables";
+@import "components/titles.scss";
+@import "components/cards.scss";
+@import "components/button.scss";
+@import "layout/header.scss";
+@import "layout/footer.scss";
+
 .location {
     display: flex;
     justify-content: center;
@@ -51,8 +61,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin: auto;
         gap: 22px;
-        margin-left: 32px;
         font-weight: 500;
     }
 }
@@ -86,30 +96,10 @@
     padding: 2px 0 68px 0;
 }
 
-@media /*Tablet*/ (min-width: 767px) {
-
-    .explore {
-        padding-bottom: 30px;
-    }
-
-    .operation-block {
-        display: flex;
-        flex-direction: row;
-
-        .block {
-            width: 30%;
-        }
-    }
-
-    .restaurants, .operation  {
-        padding: 0 10px;
-    }
-}
-
 @media /*Desktop*/ (min-width: 1024px) {
 
     .explore {
-        padding-top: 30px;
+        padding: 30px 0;
     
         &-content {
             margin: 30px 0 29px 5px;
@@ -121,8 +111,14 @@
     }
 
     .operation-block {
+        display: flex;
+        flex-direction: row;
         padding-bottom: 52px;
         margin-top: 10px;
+
+        .block {
+            width: 30%;
+        }
     }
 
 }

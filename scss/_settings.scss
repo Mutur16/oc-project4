@@ -5,7 +5,6 @@
 
 .main-container {
     width: 100%;
-    max-width: 1440px;
     box-sizing: border-box;
 }
 
@@ -18,13 +17,3 @@ a {
     text-decoration: none;
     color: black;
 }
-
-
-/*colors*/
-
-$main-color : #9356DC;
-$second-color : #FF79DA;
-$background-color : #F6F6F6;
-$new-text : #008766;
-$new-background : #99E2D0;
-$line-color : #99E2D0;

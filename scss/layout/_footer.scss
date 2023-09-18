@@ -43,14 +43,14 @@ footer {
     height: 10px;
 }
 
-@media /*Tablet*/ (min-width: 768px) {
+@media /*Desktop*/ (min-width: 1024px) {
 
     footer {
         flex-direction: row;
         align-items: baseline;
         justify-content: flex-end;
         gap: 16px;
-        padding: 60px 50px 18px 0;
+        padding: 60px 68px 18px 0;
 
         p {
             order: 2;
@@ -60,22 +60,6 @@ footer {
     .links {
         flex-direction: row;
         order: 1;
-        margin-right: 10px;
-        gap: 10px;
-
-        &-normal {
-            margin-right: 10px;
-        }
-    }
-}
-
-@media /*Desktop*/ (min-width: 1024px) {
-
-    footer {
-        padding: 60px 68px 18px 0;
-    }
-
-    .links {
         margin-right: 29px;
         gap: 16px;
 
