@@ -13,8 +13,6 @@
     font-family: 'shrikhand', sans-serif;
     font-size: 28px;
     font-weight: 400;
-    padding-top: 32px;
-    margin-bottom: -10px;
 }
 
 .section-title {
@@ -34,7 +32,7 @@
     }
 }
 
-@media /*Desktop*/ (min-width: 1024px) {
+@media /*Desktop*/ (min-width: 1200px) {
     .explore-title {
         font-size: 40px;
         margin: 0;
@@ -42,10 +40,5 @@
 
     .restaurants-title {
         padding: 26px 0 25px 18px;
-    }
-
-    .restaurant-title {
-        justify-content: center;
-        margin: 15px 0 2px -40px;
     }
 }

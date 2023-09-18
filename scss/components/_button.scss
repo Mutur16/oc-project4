@@ -38,3 +38,43 @@
     padding: 15px 48px;
     margin: -1px 0 40px 0;
 }
+
+.btn-like {
+
+    .heart {
+        display: inline-block;
+        border: none;
+        font-size: 16px;
+        background: black;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+
+    .heart-liked  {
+        display: none;
+        border: none;
+        font-size: 16px;
+        background: linear-gradient(to bottom, $main-color 0%, $second-color 90%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.btn-like-index {
+    position: absolute;
+    align-self: flex-end;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.btn-like:hover {
+    .heart-liked  {
+        display: inline-block;
+        animation: btnLike 1s forwards;
+    }
+    .heart {
+        display: none;
+    }
+}
