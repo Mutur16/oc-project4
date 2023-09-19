@@ -18,17 +18,6 @@ a {
   color: black;
 }
 
-/* Menu courses */
-@keyframes slideUp {
-  from {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 100%;
-  }
-}
 @keyframes btnLike {
   0% {
     transform: scale(1);
@@ -41,6 +30,16 @@ a {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100%;
   }
 }
 /*colors*/
@@ -147,19 +146,6 @@ a {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.like {
-  all: unset;
-  display: flex;
-  align-self: flex-end;
-  position: absolute;
-  margin-right: 15px;
-  margin-top: 18px;
-}
-.like .fa-heart {
-  width: 22px;
-  height: 21px;
-}
-
 .menu-cards {
   display: flex;
   flex-direction: column;
@@ -169,31 +155,62 @@ a {
 }
 .menu-cards .card {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .menu-cards .card-content {
-  width: 100%;
-  padding: 12px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
   box-sizing: border-box;
 }
-.menu-cards .card-title {
+.menu-cards .card-content:hover .check {
+  width: 59px;
+}
+.menu-cards .card-content:hover .fa-check-circle {
+  transform: rotate(-1turn);
+}
+.menu-cards .card-content-text {
+  padding: 12px;
+  min-width: 200px;
+}
+.menu-cards .card-content-text .card-title {
   margin-bottom: 4px;
   font-size: 18px;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu-cards .card-subtitle {
+.menu-cards .card-content-text .card-subtitle {
   font-size: 15px;
   font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu-cards .price {
-  position: absolute;
+.menu-cards .card-content-end {
   display: flex;
-  align-self: flex-end;
-  margin-top: 25px;
-  margin-right: 15px;
+  gap: 15px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.menu-cards .card-content-end .price {
   font-size: 15px;
   font-weight: 700;
+}
+.menu-cards .card-content-end .check {
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #99E2D0;
+  transition: width 1s;
+  border-radius: 0 1em 1em 0;
+}
+.menu-cards .card-content-end .check .fa-check-circle {
+  color: white;
+  font-size: 22px;
+  margin-top: 23px;
+  margin-left: 19px;
 }
 
 @media (min-width: 1200px) {
@@ -258,6 +275,13 @@ a {
   margin: -1px 0 40px 0;
 }
 
+.btn-like:hover .heart-liked {
+  display: inline-block;
+  animation: btnLike 1s forwards;
+}
+.btn-like:hover .heart {
+  display: none;
+}
 .btn-like .heart {
   display: inline-block;
   border: none;
@@ -284,14 +308,6 @@ a {
   align-self: flex-end;
   margin-top: 10px;
   margin-right: 5px;
-}
-
-.btn-like:hover .heart-liked {
-  display: inline-block;
-  animation: btnLike 1s forwards;
-}
-.btn-like:hover .heart {
-  display: none;
 }
 
 header {
@@ -351,10 +367,6 @@ footer p {
   flex-direction: column;
   gap: 7px;
 }
-.links a {
-  color: white;
-  font-size: 16px;
-}
 .links-bold {
   font-weight: 500;
 }
@@ -366,8 +378,11 @@ footer p {
 .links-normal {
   font-weight: 400;
 }
-
-.fa-xs {
+.links a {
+  color: white;
+  font-size: 16px;
+}
+.links .fa-xs {
   width: 13px;
   height: 10px;
 }

@@ -7,6 +7,7 @@
     cursor: pointer;
     position: relative;
     z-index: 1;
+    
     &:hover {
         &::after {
             opacity: 1;
@@ -40,7 +41,15 @@
 }
 
 .btn-like {
-
+    &:hover {
+        .heart-liked  {
+            display: inline-block;
+            animation: btnLike 1s forwards;
+        }
+        .heart {
+            display: none;
+        }
+    }
     .heart {
         display: inline-block;
         border: none;
@@ -50,7 +59,6 @@
         -webkit-text-fill-color: transparent;
         cursor: pointer;
     }
-
     .heart-liked  {
         display: none;
         border: none;
@@ -67,14 +75,4 @@
     align-self: flex-end;
     margin-top: 10px;
     margin-right: 5px;
-}
-
-.btn-like:hover {
-    .heart-liked  {
-        display: inline-block;
-        animation: btnLike 1s forwards;
-    }
-    .heart {
-        display: none;
-    }
 }

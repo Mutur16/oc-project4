@@ -3,6 +3,12 @@
     background: linear-gradient(193deg, $main-color -11%, $second-color 123%);
 }
 
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 @mixin pseudo-elem {
     content: "";
     position: absolute;

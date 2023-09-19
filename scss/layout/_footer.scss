@@ -13,15 +13,10 @@ footer {
     }
 }
 
-    .links {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-
-        a {
-            color: white;
-            font-size: 16px;
-        }
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 
     &-bold { 
         font-weight: 500;
@@ -32,15 +27,17 @@ footer {
             gap: 7px;
         }
     }
-
     &-normal {
         font-weight: 400;
     }
-}
-
-.fa-xs {
-    width: 13px;
-    height: 10px;
+    a {
+        color: white;
+        font-size: 16px;
+    }
+    .fa-xs {
+        width: 13px;
+        height: 10px;
+    }
 }
 
 @media /*Desktop*/ (min-width: 1200px) {
