@@ -3,6 +3,7 @@
     flex-direction: column;
     background-color: white;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .restaurants-cards {
@@ -70,20 +71,16 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        box-sizing: border-box;
 
         &:hover {
             .check {
                 width: 59px;
             }
-            .fa-check-circle {
-                transform: rotate(-1turn);
-            }
         }
     }
 
     .card-content-text {
-        padding: 12px;
+        padding: 12px 8px;
         min-width: 200px;
 
         .card-title {
@@ -106,6 +103,7 @@
         box-sizing: border-box;
 
         .price {
+            margin-top: 30px;
             font-size: 15px;
             font-weight: 700;
         }

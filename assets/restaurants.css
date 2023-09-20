@@ -1,6 +1,7 @@
 * {
   font-family: "roboto", sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 .main-container {
@@ -18,18 +19,57 @@ a {
   color: black;
 }
 
-@keyframes btnLike {
+@keyframes FadeOut {
   0% {
-    transform: scale(1);
-    opacity: 0.5;
+    visibility: visible;
+    opacity: 1;
   }
   50% {
-    transform: scale(1.2);
-    opacity: 0.8;
+    visibility: visible;
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
     opacity: 1;
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate3 {
+  0% {
+    opacity: 0;
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
 @keyframes slideUp {
@@ -95,6 +135,7 @@ a {
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
+  overflow: hidden;
 }
 
 .restaurants-cards {
@@ -161,16 +202,12 @@ a {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  box-sizing: border-box;
 }
 .menu-cards .card-content:hover .check {
   width: 59px;
 }
-.menu-cards .card-content:hover .fa-check-circle {
-  transform: rotate(-1turn);
-}
 .menu-cards .card-content-text {
-  padding: 12px;
+  padding: 12px 8px;
   min-width: 200px;
 }
 .menu-cards .card-content-text .card-title {
@@ -195,6 +232,7 @@ a {
   box-sizing: border-box;
 }
 .menu-cards .card-content-end .price {
+  margin-top: 30px;
   font-size: 15px;
   font-weight: 700;
 }
@@ -275,41 +313,51 @@ a {
   margin: -1px 0 40px 0;
 }
 
-.btn-like:hover .heart-liked {
-  display: inline-block;
-  animation: btnLike 1s forwards;
-}
-.btn-like:hover .heart {
-  display: none;
+.btn-like {
+  margin: -20px 0 0 7px;
 }
 .btn-like .heart {
-  display: inline-block;
-  border: none;
+  position: absolute;
+  padding: 2px;
   font-size: 16px;
   background: black;
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.btn-like .heart:hover {
+  transform: scale(1.1);
 }
 .btn-like .heart-liked {
-  display: none;
-  border: none;
+  position: absolute;
+  opacity: 0;
+  padding: 2px;
   font-size: 16px;
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 90%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.btn-like .heart-liked:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .btn-like-index {
   position: absolute;
   align-self: flex-end;
-  margin-top: 10px;
-  margin-right: 5px;
+  margin: 10px 37px 0 0;
 }
 
+@media (min-width: 1200px) {
+  .btn-like-index {
+    margin-right: 48px;
+  }
+}
 header {
   display: flex;
   flex-direction: column;
