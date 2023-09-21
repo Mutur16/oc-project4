@@ -118,15 +118,27 @@
         gap: 22px;
         font-weight: 500;
     }
+
+    &:hover {
+        background-color: lighten($main-color, 35%);
+    }
+
+    &:hover .operation-icon{
+        color: $main-color;
+    }
 }
 
 .operation-icon {
     color: #7E7E7E;
-    width: 18px;
+    width: 23px;
+}
+
+.fa-mobile-screen-button {
+    margin-left: 17px;
 }
 
 .fa-store {
-    color: $main-color;
+    margin-left: 5px;
 }
 
 .left-number {

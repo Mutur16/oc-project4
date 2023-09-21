@@ -314,7 +314,7 @@ a {
 }
 
 .btn-like {
-  margin: -20px 0 0 7px;
+  margin: -20px 50px 0 7px;
 }
 .btn-like .heart {
   position: absolute;
@@ -354,8 +354,11 @@ a {
 }
 
 @media (min-width: 1200px) {
+  .btn-like {
+    margin: -20px 0 0 7px;
+  }
   .btn-like-index {
-    margin-right: 48px;
+    margin: 10px 48px 0 0;
   }
 }
 header {
@@ -556,14 +559,24 @@ footer p {
   gap: 22px;
   font-weight: 500;
 }
+.block:hover {
+  background-color: #f2eafb;
+}
+.block:hover .operation-icon {
+  color: #9356DC;
+}
 
 .operation-icon {
   color: #7E7E7E;
-  width: 18px;
+  width: 23px;
+}
+
+.fa-mobile-screen-button {
+  margin-left: 17px;
 }
 
 .fa-store {
-  color: #9356DC;
+  margin-left: 5px;
 }
 
 .left-number {

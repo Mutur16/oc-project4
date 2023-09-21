@@ -314,7 +314,7 @@ a {
 }
 
 .btn-like {
-  margin: -20px 0 0 7px;
+  margin: -20px 50px 0 7px;
 }
 .btn-like .heart {
   position: absolute;
@@ -354,8 +354,11 @@ a {
 }
 
 @media (min-width: 1200px) {
+  .btn-like {
+    margin: -20px 0 0 7px;
+  }
   .btn-like-index {
-    margin-right: 48px;
+    margin: 10px 48px 0 0;
   }
 }
 header {
